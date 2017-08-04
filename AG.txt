@@ -1,0 +1,57 @@
+环境搭建：
+   node -v :查看node 版本
+   npm  -v :查看npm  版本
+   cnpm -v :查看各插件版本
+   ng   -v :查看 插件版本信息
+1、在Node的安装根目录下，创建node_global、node_cache两个文件夹，以管理员身份打开cmd窗口执行以下命令：
+	npm config set prefix "***\nodejs\node_global"
+	npm config set cache "***\nodejs\node_cache"
+设置环境变量，编辑用户变量：
+	PATH="*\nodejs\node_global"
+添加系统变量，这样就可以统一管理全局插件的安装了：
+	NODE_PATH="*\nodejs\node_global\node_modules"
+2、接下来安装cnpm，由于访问国外资源的限制，cnpm提供了镜像安装的解决方法，非常好用。可翻墙的同学跳过此步。
+	$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+3、安装angular-cli脚手架，现在还是1.0beta版本，这里注意用到了cnpm，本人这里采用镜像安装，比较快速：
+	$cnpm install -g angular-cli
+4、接下来安装typescript环境依赖：
+	$cnpm install -g typescript
+创建项目
+  1、管理员打开cmd，进入到存放工程的目录下执行以下命令(PROJECT_NAME为您的项目名称，随意)。这里须注意下，由于没有翻墙，如果直接用$ng new PROJECT_NAME项目会创     建失败，所以这里创建项目也用到了cnpm：
+     $ng new PROJECT_NAME --skip-npm
+     $cd PROJECT_NAMEcnp
+     $cnpm install
+	
+  2、启用项目，浏览器输入 http://localhost:4200/，看是否看到app work！
+
+        $ng serve
+组件、模块、路由
+angular-cli提供了生成Component、Module及Routet的方法，命令以 ng generate 开头，可以缩写为 ng g，下面给出创建 component 的几种方式。
+
+ng generate component my-new-component
+ng g component my-new-component # using the alias
+
+# components support relative path generation
+# if in the directory src/app/feature/ and you run
+ng g component new-cmp
+# your component will be generated in src/app/feature/new-cmp
+# but if you were to run
+ng g component ../newer-cmp
+# your component will be generated in src/app/newer-cmp
+  下表里是所有的命令：
+	Component  =  ng g component my-new-compontent
+	Directive  =  ng g directive my-new-derective
+	Pipe       =  ng g pipe my-new-pipe
+	Service    =  ng g service my-new-service
+	Class      =  ng g class my-new-class
+	Interface  =  ng g interface my-new-interface
+	Enum       =  ng g enum my-new-enum
+	Module     =  ng g module my-module 
+添加组件Component
+  $ng g component home
+  $ng g component about
+添加模块Module
+  执行添加模块命令，注意新添加的文件区别。
+  	$ng g module home
+  	$ng g module about
+
