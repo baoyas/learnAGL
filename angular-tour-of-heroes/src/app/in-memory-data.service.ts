@@ -1,4 +1,4 @@
-// 此文件用来替代 mock-heroes.ts  英雄数据数组
+// 此文件为 设置内存英雄数组    用来 替代 mock-heroes.ts  英雄数据数组
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
