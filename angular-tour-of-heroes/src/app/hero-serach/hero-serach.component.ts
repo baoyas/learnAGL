@@ -1,5 +1,8 @@
+// 组件 钩子 引入
 import { Component, OnInit } from '@angular/core';
+// 支持路游
 import { Router }            from '@angular/router';
+// 支持 Observable 加载
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 // Observable class extensions
@@ -8,6 +11,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
+
 import { HeroSearchService } from '../service/hero-search.service';
 import { Hero } from '../hero';
 
