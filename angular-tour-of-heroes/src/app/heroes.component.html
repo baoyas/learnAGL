@@ -11,13 +11,13 @@
 	<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 	<div *ngIf="selectedHero">
 		<h2>
-			{{selectedHero.name | uppercase}} is my hero
+			{{selectedHero.name | uppercase}} is my chooes hero
 		</h2>
 		<button (click)="gotoDetail()">View Details</button>
 	</div>
 
 <!--添加按钮  -->
-<div>
+<div *ngIf="!selectedHero">
   <label>Hero name:</label> <input #heroName />
   <button (click)="add(heroName.value); heroName.value=''">
     Add
