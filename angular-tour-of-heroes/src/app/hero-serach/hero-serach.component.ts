@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 // 支持路游
 import { Router }            from '@angular/router';
-// 支持 Observable 加载
+// 支持 Observable 加载   只返回最后一次的 请求
 import { Observable }        from 'rxjs/Observable';
 import { Subject }           from 'rxjs/Subject';
 // Observable class extensions
