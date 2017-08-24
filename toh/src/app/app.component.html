@@ -1,19 +1,25 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-   	欢迎来到    {{title}}!
-  </h1>
-  <h2>
-  	你的英雄是   {{hero.name}}
-  </h2>
+  <h1>欢迎来到    {{title}}!</h1>
+   <h2>My Heroes</h2>
+  <ul class="heroes">
+  	<li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected] = "hero === selectedHero">
+  		<span class="badge">{{hero.id}}</span>
+  		 {{hero.name}} 
+  	</li>
+  </ul>
 </div>
-<div>
-	<label>id: </label>
-	{{hero.id}}
+<div *ngIf="selectedHero">
+	<h2>你选中的英雄是：{{selectedHero.name}}</h2>
+	<div>
+		<label>id: </label>
+		{{selectedHero.id}}
+	</div>
+	<div>
+		<label>name: </label>
+		
+		<input [(ngModel)]="selectedHero.name" placeholder="name"/>
+	</div>
 </div>
-<div>
-	<label>name: </label>
-	
-	<input [(ngModel)]="hero.name" placeholder="name"/>
-</div>
+
 
