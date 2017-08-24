@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   	欢迎来到    {{title}}!
+  </h1>
+  <h2>
+  	你的英雄是   {{hero.name}}
+  </h2>
+</div>
+<div>
+	<label>id: </label>
+	{{hero.id}}
+</div>
+<div>
+	<label>name: </label>
+	
+	<input [(ngModel)]="hero.name" placeholder="name"/>
+</div>
+
