@@ -1,12 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1 style="text-align:center">欢迎来到    {{title}}!</h1>
-   <h2>英雄列表</h2>
-  <ul class="heroes">
-  	<li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected] = "hero === selectedHero">
-  		<span class="badge">{{hero.id}}</span>
-  		 {{hero.name}} 
-  	</li>
-  </ul>
-</div>
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<h1 style="text-align:center">欢迎来到    {{title}}!</h1>
+<!--router-->
+<!--<app-heroes-list></app-heroes-list>-->
+<nav>
+	<a routerLink="/heroes">英雄列表</a>
+	<a routerLink="/dashboard">英雄仪表盘</a>
+</nav> 
+<router-outlet></router-outlet>
