@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../hero';
-
 import { HeroService } from '../hero.service';
 //路由parms 功能
 import { ActivatedRoute, Params } from '@angular/router';
