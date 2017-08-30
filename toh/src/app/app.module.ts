@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { DashboardComponent } from './dashboard/dashboard-component.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 import { HeroService } from './hero.service';
 //添加路由
@@ -19,7 +20,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
 		AppComponent,
 		HeroDetailComponent,
 		HeroesListComponent,
-		DashboardComponent
+		DashboardComponent,
+		HeroSearchComponent
 	],
 	imports: [
 		BrowserModule,
